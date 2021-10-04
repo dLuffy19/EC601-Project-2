@@ -24,3 +24,73 @@ I created several test document in JSON format, and then use curl to send a requ
 ```
 curl "https://language.googleapis.com/v1/documents:analyzeSentiment?key=${API_KEY}" -s -X POST -H "Content-Type: application/json" --data-binary @<test_document_file_name>
 ```
+
+For `positive_doc.json`, the result is:
+
+```
+{
+
+  "documentSentiment": {
+    "magnitude": 1.9,
+    "score": 0.9
+  },
+  "language": "en",
+  "sentences": [
+    {
+      "text": {
+        "content": "I love basketball.",
+        "beginOffset": 0
+      },
+      "sentiment": {
+        "magnitude": 0.9,
+        "score": 0.9
+      }
+    },
+    {
+      "text": {
+        "content": "I think everyone should play basketball.",
+        "beginOffset": 19
+      },
+      "sentiment": {
+        "magnitude": 0.9,
+        "score": 0.9
+      }
+    }
+  ]
+}
+```
+
+For `negative_doc.json`, the result is:
+
+```
+{
+  "documentSentiment": {
+    "magnitude": 1.1,
+    "score": -0.3
+  },
+  "language": "en",
+  "sentences": [
+    {
+      "text": {
+        "content": "I think his performance is bad.",
+        "beginOffset": 0
+      },
+      "sentiment": {
+        "magnitude": 0.9,
+        "score": -0.9
+      }
+    },
+    {
+      "text": {
+        "content": "However, the movie overall is pretty good.",
+        "beginOffset": 32
+      },
+      "sentiment": {
+        "magnitude": 0.1,
+        "score": 0.1
+      }
+    }
+  ]
+}
+```
+
