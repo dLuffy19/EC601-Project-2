@@ -94,3 +94,6 @@ For `negative_doc.json`, the result is:
 }
 ```
 
+## Unit tests for project 2
+For the unit test, I used the Python built-in `unittest` module.
+The unit tests are located inside the Google_NLP_test and Twitter_API_test folders.
