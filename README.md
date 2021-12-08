@@ -1,5 +1,11 @@
 # EC601-Project-2
-## Twitter API tests
+## Part I: Twitter API tests
+### User story
+A Twitter user wants to know some specific content on Twitter, he/she can use this project to filter and get the content he/she wants.
+### MVP
+* User can freely get, add and delete filter rules
+* User can get the filtered content after applying the rules
+
 ### Authentication
 For my consumer key, consumer secret, access token key, access token secret and bearer token, I export them as environment variables as follows:
 ```
@@ -10,10 +16,17 @@ And then I use `os` package to access them:
 import os
 consumer_key = os.environ.get("CONSUMER_KEY")
 ```
-### request.py
-This is a test program to access Twitter API and send a request.
+### twitter_api.py
+This is the main implementation file.
+### twitter_api_unittest.py
+This is the unit test file.
 
-## Google NLP tests
+## Part II: Google NLP tests
+
+### User story
+
+### MVP
+
 ### Authentication
 For my API key, I export it as follows:
 ```
